@@ -87,7 +87,7 @@ section{
   background: transparent;
   border: .2rem solid var(--main-colorss);
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--main-color);
-  margin: 3rem 1.5rem 3rem 0;
+  margin: 3rem 3rem 3rem 0;
 }
