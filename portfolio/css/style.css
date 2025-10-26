@@ -11,7 +11,7 @@
 :root{
   --bg-color: #1f242d;
   --second-bg-color: #323946;
-  --text-color: #fff;
+  --text-color: white;
   --main-color: #ffcc00;
 }
 html{
@@ -47,6 +47,11 @@ body{
   font-weight: 600;
   transition: .3s;
   
+}
+#menu-icon{
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
 }
 .navbar a:hover,
 .navbar a.active{
@@ -117,6 +122,7 @@ span{
   letter-spacing: .1rem;
   font-weight: 600;
   transition: .5s ease;
+  cursor: pointer;
 }
 .btn:hover{
   box-shadow: 0 0 1rem var(--main-color);
@@ -233,7 +239,51 @@ span{
   display: block; /* Remove extra space below image */
   animation: scaleAndShadow 4s infinite alternate; /* 4s duration, infinite loop, alternates direction */
 }
+.contact h2{
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.contact form{
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
 
+}
+.contact form .input-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box input, textarea{
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem;
+  margin: 0.7rem 0;
+}
+.contact form .input-box input{
+  width: 49%;
+}
+textarea{
+  resize: none;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+
+}
+.footer-text p{
+  font-size: 1.6rem;
+  text-align: center;
+}
 @keyframes scaleAndShadow {
   0% {
     transform: scale(1);
@@ -247,4 +297,41 @@ span{
     transform: scale(1); 
     box-shadow: 0 0 5px var(--main-color); 
   }
+}
+@media (max-width: 991px){
+  .header{
+    padding: 2rem 3%;
+  }
+  section{
+    padding: 10rem 3% 2rem;
+  }
+  .footer{
+    padding: 2rem 3%;
+  }
+}
+@media (max-width: 768px){
+ #menu-icon{
+  display: block;
+ } 
+ .navbar{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 1rem 3%;
+  background: var(--bg-color);
+  border-top: .1rem solid rgba(0, 0, 0, .2);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+  
+    transition: all 0.3s ease;
+ }
+ .navbar a{
+  display: block;
+  font-size: 2rem;
+  margin: 3rem 0;
+ }
+ .navbar.active{
+  display: block;
+ }
 }

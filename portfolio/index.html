@@ -1,81 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.min.css">
-</head>
-<body>
-  <header class="header">
-    <a href="#" class="logo">Portfolio.</a>
-    <nav class="navbar">
-      <a href="#Home" class="active">Home</a>
-      <a href="#About">About</a>
-      <a href="#Services">Services</a>
-      <a href="#COntact">Contact</a>
-    </nav>
-  </header>
-  <section class="home" id="Home">
-    <div class="home-content">
-      <h3>Hello, It's Me</h3>
-      <h1>Adnan Bacha Khan</h1>
-      <h3>And I'm a <span>Frontend Developer</span></h3>
-      <p>I’m a frontend developer who loves crafting sleek, responsive, and modern web apps using React, JavaScript, HTML, and CSS. Always chasing clean code and cool UI vibes 😎</p>
-      <div class="social-media">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.min.css" />
+  </head>
+  <body>
+    <header class="header">
+
+      <a href="#" class="logo">Portfolio.</a>
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#Home" class="active">Home</a>
+        <a href="#About">About</a>
+        <a href="#Services">Services</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+    </header>
+    <section class="home" id="Home">
+      <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Adnan Bacha Khan</h1>
+        <h3>And I'm a <span>Frontend Developer</span></h3>
+        <p>
+          I’m a frontend developer who loves crafting sleek, responsive, and
+          modern web apps using React, JavaScript, HTML, and CSS. Always chasing
+          clean code and cool UI vibes 😎
+        </p>
+        <div class="social-media">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <a href="#" class="btn">Download CV</a>
       </div>
-      <a href="#" class="btn">Download CV</a>
-    </div>
-    <div class="home-img">
-<img src="images/final-1.png" alt="">
-    </div>
+      <div class="home-img">
+        <img src="images/final-1.png" alt="" />
+      </div>
+    </section>
+    <section class="about" id="About">
+      <h1 class="about-heading">About <span>Me</span></h1>
+      <div class="about-img">
+        <img
+          src="images/freepik_br_a79584f1-bed6-4091-8aa2-f37bd90e5b66.png"
+          alt=""
+        />
+        <span class="circle-span"></span>
+      </div>
+      <div class="about-content">
+        <h1>Frontend Developer</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+          maxime, eius, impedit commodi illo nobis corporis enim officia, a
+          vitae ut molestias quos sint nisi quia quae laborum hic nam.Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Mollitia maxime,
+          eius, impedit commodi illo nobis corporis enim officia, a vitae ut
+          molestias quos sint nisi quia quae laborum hic nam.
+        </p>
+        <div class="about-btn">
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+    <section class="services" id="Services">
+      <h1 class="services-heading">Our <span>Services</span></h1>
+      <div class="services-container">
+        <div class="services-box">
+          <i class="fa-solid fa-code"></i>
+          <h3>Web Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+            tempora reiciendis voluptate incidunt facere quis nam ipsum alias
+            nostrum voluptas?
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
 
-  </section>
-<section class="about" id="About">
-  <h1 class="about-heading">About <span>Me</span></h1>
-  <div class="about-img">
-    <img src="images/freepik_br_a79584f1-bed6-4091-8aa2-f37bd90e5b66.png" alt="">
-    <span class="circle-span"></span>
-  </div>
-  <div class="about-content">
-    <h1>Frontend Developer</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maxime, eius, impedit commodi illo nobis corporis enim officia, a vitae ut molestias quos sint nisi quia quae laborum hic nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maxime, eius, impedit commodi illo nobis corporis enim officia, a vitae ut molestias quos sint nisi quia quae laborum hic nam.</p>
-    <div class="about-btn">
-      <a href="#" class="btn">Read More</a>
-    </div>
-  </div>
-</section>
-<section class="services" id="Services">
-   <h1 class="services-heading">Our <span>Services</span></h1>
-  <div class="services-container">
-   
- <div class="services-box">
-  <i class="fa-solid fa-code"></i>
-  <h3>Web Development</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque tempora reiciendis voluptate incidunt facere quis nam ipsum alias nostrum voluptas?</p>
-  <a href="#" class="btn">Read More</a>
- </div>
+        <div class="services-box">
+          <i class="fa-solid fa-palette"></i>
+          <h3>Graphics Designing</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+            tempora reiciendis voluptate incidunt facere quis nam ipsum alias
+            nostrum voluptas?
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
 
-  <div class="services-box">
-  <i class="fa-solid fa-palette"></i>
-  <h3>Graphics Designing</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque tempora reiciendis voluptate incidunt facere quis nam ipsum alias nostrum voluptas?</p>
-  <a href="#" class="btn">Read More</a>
- </div>
-
-  <div class="services-box">
-  <i class="fa-solid fa-signal"></i>
-  <h3>Digital Marketing</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque tempora reiciendis voluptate incidunt facere quis nam ipsum alias nostrum voluptas?</p>
-  <a href="#" class="btn">Read More</a>
- </div>
- </div>
-</section>
-
-</body>
+        <div class="services-box">
+          <i class="fa-solid fa-signal"></i>
+          <h3>Digital Marketing</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+            tempora reiciendis voluptate incidunt facere quis nam ipsum alias
+            nostrum voluptas?
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="Contact">
+      <h2>Contact <span>Us</span></h2>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email address" />
+        </div>
+        <div class="input-box">
+          <input type="number" placeholder="Mobile Number" />
+          <input type="text" placeholder="Email Subject" />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Your Massage"
+        ></textarea>
+        <input type="submit" class="btn" value="Send Massage" />
+      </form>
+    </section>
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2025 By Adnan Bacha Khan | All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
 </html>
