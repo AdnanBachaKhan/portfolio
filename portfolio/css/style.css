@@ -10,7 +10,7 @@
 }
 :root{
   --bg-color: #1f242d;
-  --second-bg-color: #323946;
+  --second-bg-color: #3a3f4b;
   --text-color: white;
   --main-color: #ffcc00;
 }
@@ -18,9 +18,12 @@ html{
   font-size: 62.5%;
   overflow-x: hidden;
 }
-body{
+body {
   background: var(--bg-color);
   color: var(--text-color);
+  transition: background 1s, color 1s;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 .header{
   position: fixed;
@@ -181,6 +184,9 @@ span{
   font-size: 1.6rem;
   margin: 1rem 0rem 1rem;
 }
+.services{
+  background: var(--second-bg-color);
+}
 .services-container{
   display: flex;
   justify-content: center;
@@ -190,7 +196,7 @@ span{
 }
 .services-box{
   flex: 1 1 30rem;
-  background: var(--second-bg-color);
+  background: var(--bg-color);
   padding: 3rem 2rem 4rem;
   border-radius: 2rem;
   text-align: center;
@@ -227,11 +233,11 @@ span{
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }.image-container {
-  width: 200px; /* Adjust as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin: 50px auto; /* Center the image */
-  overflow: hidden; /* Ensures shadow doesn't get cut off if it expands too much */
-  border-radius: 10px; /* Optional: adds rounded corners to the image container */
+  width: 200px; 
+  height: auto; 
+  margin: 50px auto;
+  overflow: hidden; 
+  border-radius: 10px; 
 }
 
 .image-container img {
@@ -256,6 +262,7 @@ span{
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .contact form .input-box input, textarea{
   width: 100%;
   padding: 1.5rem;
@@ -264,12 +271,23 @@ span{
   background: var(--second-bg-color);
   border-radius: .8rem;
   margin: 0.7rem 0;
+    transition: 
+    transform 0.9s ease, 
+    border-color 0.9s ease, 
+    box-shadow 0.9s ease, 
+    background 0.9s ease;
 }
 .contact form .input-box input{
   width: 49%;
 }
 textarea{
   resize: none;
+}
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+  transform: scale(1.03);
+  border-color: var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
 }
 .footer{
   display: flex;
@@ -284,6 +302,119 @@ textarea{
   font-size: 1.6rem;
   text-align: center;
 }
+.skills{
+  
+  padding-bottom: 7rem;
+  background: var(--bg-color);
+}
+.skills .skills-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.skills-column{
+  flex: 1 1 40rem;
+}
+.skills h2{
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+.skills-box .skills-content{
+  position: relative;
+  border: .2rem solid var(--main-color);
+  border-radius: .6rem;
+  padding: .5rem 1.5rem;
+  z-index: 1;
+  overflow: hidden;
+}
+.skills-box .skills-content::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--second-bg-color);
+  z-index: -1;
+  transition: .5s;
+}
+.skills-box .skills-content:hover::before{
+  width: 100%;
+}
+.progress{
+  padding: 1rem 0;
+}
+.progress h3{
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+progress h3 span{
+  color: var(--text-color);
+}
+.progress .bar{
+  height: 2.5rem;
+  border-radius: .6rem;
+  border: .2rem solid var(--main-color);
+  padding: .5rem;
+  margin: 1rem 0;
+}
+.skills-content .progress .bar span{
+  display: block;
+  height: 100%;
+  border-radius: .3rem;
+ background: var(--main-color);
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
+  width: 90%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
+  width: 80%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
+  width: 70%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
+  width: 65%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
+  width: 75%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+  width: 70%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span{
+  width: 70%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
+  width: 65%;
+}
+#theme-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--main-color);
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+#theme-btn:hover {
+  transform: scale(1.1);
+}
+
 @keyframes scaleAndShadow {
   0% {
     transform: scale(1);
@@ -334,4 +465,27 @@ textarea{
  .navbar.active{
   display: block;
  }
+ .home{
+  flex-direction: column;
+ }
+ .home-content h3{
+  font-size: 2.6rem;
+ }
+ .home-content h1{
+  font-size: 5rem;
+ }
+.home-img img{
+  width: 70vw;
+  height: 70vh;
+  margin-top: 4rem;
 }
+}
+@media (max-width: 450px) {
+  html{
+    font-size: 50%;
+  }
+ .contact form .input-box input{
+    width: 100%;
+  }
+}
+
